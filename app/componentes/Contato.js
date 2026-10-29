@@ -41,7 +41,7 @@ export default function Contato() {
             <button type="submit">Enviar</button>
           </form>
 
-          {enviado && <p>Obrigado pelo contato!</p>}
+          {enviado && <p>Obrigado pelo contato.</p>}
         </section>
     );
 }

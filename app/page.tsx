@@ -5,7 +5,6 @@ import Tarefas from "./componentes/Tarefas";
 import { projetos } from "./dados";
 import Link from "next/link";
 
-
 export default function home() {
   const nome = "Carlos Campos";
 
@@ -18,16 +17,16 @@ export default function home() {
         <p><strong>Aqui te mostro um pouco sobre mim.</strong></p>
       </Secao>
 
-      <Secao titulo="">
-      {projetos.map((p) => (
-        <Cartao
-          id={p.id}
-          key={p.id}
-          titulo={p.titulo}
-          descricao={p.descricao}
-          tecnologias={p.tecnologias}
-        />
-      ))}
+      <Secao titulo="Meus projetos">
+              {projetos.map((p) => (
+                <Cartao
+                  id={p.id}
+                  key={p.id}
+                  titulo={p.titulo}
+                  descricao={p.descricao}
+                  tecnologias={p.tecnologias}
+                />
+              ))}
       </Secao>
       <br></br>
       <Contato />

@@ -1,6 +1,5 @@
-import "./globals.css";
-import Menu from "../dados";
-import Rodape from "./componentes/Cartao";
+import { projetos } from "../dados";
+import Cartao from "../componentes/Cartao";
 
 export const metadata = {
   title: "Meus projetos",
@@ -8,13 +7,19 @@ export const metadata = {
 };
 
 export default function Projetos () {
-    return(
+    return (
+        <main>
+            <h1>Meus projetos</h1>
       
-      {projetos.map((p) => (
-        <Cartao
-          id={p.id}
-          key={p.id}
-          titulo={p.titulo}
-          descricao={p.descricao}
-          tecnologias={p.tecnologias}
-        />
+            {projetos.map((p) => (
+                <Cartao
+                id={p.id}
+                key={p.id}
+                titulo={p.titulo}
+                descricao={p.descricao}
+                tecnologias={p.tecnologias}
+                />
+            ))}
+        </main>
+    );
+}

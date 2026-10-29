@@ -2,7 +2,7 @@ import { projetos } from "../dados";
 import Cartao from "../componentes/Cartao";
 
 export const metadata = {
-  title: "Meus projetos",
+  title: "Projetos | Meu portfólio",
   description: "Conheça meus projetos",
 };
 

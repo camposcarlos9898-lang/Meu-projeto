@@ -1,4 +1,4 @@
-import { projetos } from "../..dados";
+import { projetos } from "../../dados";
 
 export default async function PaginaProjeto (params) {
     const { id } = await params;

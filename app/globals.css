@@ -108,3 +108,11 @@ footer {
     padding: 20px;
   }
 }
+
+.busca-cep {
+  max-width: 500px;
+  padding: 25px;
+  margin: 30 px auto;
+  border-radius: 12px;
+  color: #246451;
+}

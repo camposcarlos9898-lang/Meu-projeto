@@ -7,10 +7,24 @@ export default function Contato() {
     const [email, setEmail] = useState("")
     const [enviado, setEnviado] = useState(false)
 
-    function enviar(e) {
+    async function enviar(e) {
         e.preventDefault();
 
-        if (nome && email.includes("@")) {setEnviado(true);}
+        if (nome && email.includes("@")) {
+          const res = await fetch("/api/contato", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ nome, email })
+          });
+
+          const dados = await res.json();
+
+          if (dados.ok) {
+            setEnviado(true);
+          }
+        }
     }
 
     return (

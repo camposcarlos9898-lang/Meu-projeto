@@ -4,6 +4,7 @@ import Contato from "./componentes/Contato";
 import Tarefas from "./componentes/Tarefas";
 import { projetos } from "./dados";
 import Link from "next/link";
+import BuscaCep from "./componentes/BuscaCep";
 
 export default function home() {
   const nome = "Carlos Campos";
@@ -28,10 +29,13 @@ export default function home() {
                 />
               ))}
       </Secao>
+       <Secao titulo="">
+        <BuscaCep />
+      </Secao> 
       <br></br>
       <Contato />
       <br></br>
-      <Tarefas />     
+      <Tarefas />    
     </div>
   );  
 }

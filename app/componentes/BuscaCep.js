@@ -46,7 +46,7 @@ export default function BuscaCep() {
                   value={cep}
                   onChange={(e) => setCep(e.target.value)}
                   placeholder="Digite seu CEP"
-                  maxLenght={8}
+                  maxLength={8}
                 />
 
                 <button type="submit">Buscar</button>

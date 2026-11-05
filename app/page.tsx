@@ -1,7 +1,7 @@
 import Cartao from "./componentes/Cartao";
 import Secao from "./componentes/Secao";
 import Contato from "./componentes/Contato";
-import Tarefas from "./componentes/Tarefas";
+import Hobbies from "./componentes/Hobbies";
 import { projetos } from "./dados";
 import Link from "next/link";
 import BuscaCep from "./componentes/BuscaCep";
@@ -11,7 +11,11 @@ export default function home() {
 
   return (
     <div>
-      
+      <img
+        src="/foto2.jpg"
+        alt="Minha foto"
+        className="foto-perfil"
+      />
       <h1><em><strong>Olá, sou {nome} !</strong></em></h1>
 
       <Secao titulo="Bem-vindo ao meu portfólio !">
@@ -33,9 +37,13 @@ export default function home() {
         <BuscaCep />
       </Secao> 
       <br></br>
+      <Secao titulo="Hobbies">
+        <Hobbies /> 
+      </Secao>
+      <br></br>
       <Contato />
       <br></br>
-      <Tarefas />    
+         
     </div>
   );  
 }

@@ -115,4 +115,77 @@ footer {
   margin: 30 px auto;
   border-radius: 12px;
   color: #246451;
+  background-color: #f1f1f1;
+}
+
+.busca-cep h2 {
+  margin-bottom: 10px;
+}
+
+.busca-cep form {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.busca-cep input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.busca-cep button {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 6px;
+  background-color: #2563eb;
+  color: white;
+  cursor: pointer;
+}
+
+.foto-perfil {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 20px auto;
+}
+
+.hobbies {
+  padding: 25px;
+  margin: 30px 0;
+  background-color: #f1f1f1;
+  border-radius: 12px;
+  text-align: center;
+  width: 90%;
+}
+
+.lista-hobbies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.hobby {
+  padding: 15px 25px;
+  background-color: #244b43;
+  color: white;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.hobbies .lista-hobbies {
+  display: flex; 
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center; 
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
 }

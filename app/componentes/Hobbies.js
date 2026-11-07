@@ -36,20 +36,39 @@ return (
       <form onSubmit={adicionar}>
         <input
           type="text"
-          placeholder=""Digite um hobby"
+          placeholder="Digite um hobby"
           value={nome}
           onChange={(e) => setNome(e.target.value)}
         />
-
+        
         <button type="submit">
-         Adicionar  
+           Adicionar  
         </button>
       </form> 
 
       <div className="lista-hobbies">
+
         {hobbies.map((hobby) => (
-            <div key={hobby} className="hobby">
-                {hobby}
+            <div key={hobby.id} className="hobby">
+
+              <span className="nome-hobby">
+                {hobby.nome}
+              </span>
+
+              <button
+                onClick={() =>
+                  alternarHobby(hobby.id,hobby.praticado)
+                }
+              >
+                {hobby.praticado ? "Desmarcar" : "Praticado"}
+              </button>
+
+              <button
+                onClick={() => removerHobby(hobby.id)}
+              >
+                Excluir
+              </button>
+                
             </div>
         ))}
       </div>

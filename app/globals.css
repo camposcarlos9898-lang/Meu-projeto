@@ -166,7 +166,7 @@ footer {
   display: flex;
   flex-wrap: wrap;
   gap: 15px;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   width: 100%;
   margin: 0 auto;
@@ -178,14 +178,29 @@ footer {
   color: white;
   border-radius: 8px;
   text-align: center;
+  align-items: flex-start;
+  display: flex;
+  min-width: 160px;
+  flex-direction: column;
 }
 
 .hobbies .lista-hobbies {
   display: flex; 
-  flex-direction: row;
+  flex-direction: center;
   flex-wrap: wrap;
   justify-content: center; 
   align-items: center;
   width: 100%;
   margin: 0 auto;
+}
+
+.nome-hobby {
+  font-size: 18px;
+  font-weight: bold
+}
+
+.hobby button {
+  font-size: 12px;
+  padding: 5px 10px;
+  margin-right: 5px;
 }

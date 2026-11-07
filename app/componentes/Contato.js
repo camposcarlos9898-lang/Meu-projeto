@@ -1,31 +1,35 @@
 "use client";
 
 import {useState} from "react"
+import { salvarMensagem } from "../../lib/mensagens";
 
 export default function Contato() {
     const [nome, setNome] = useState("")
     const [email, setEmail] = useState("")
+    const [mensagem, setMensagem] = useState("")
     const [enviado, setEnviado] = useState(false)
 
     async function enviar(e) {
         e.preventDefault();
+        console.log("CLIQUEI EM ENVIAR");
 
-        if (nome && email.includes("@")) {
-          const res = await fetch("/api/contato", {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json"
-            },
-            body: JSON.stringify({ nome, email })
-          });
+        if (nome && email.includes("@") && mensagem.trim()) {
+          try {
+            await salvarMensagem(nome, email, mensagem);
+            console.log("Mensagem enviada ao Firebase!");
 
-          const dados = await res.json();
-
-          if (dados.ok) {
             setEnviado(true);
+            setNome("");
+            setEmail("");
+            setMensagem("");
+          } catch (erro) {
+            console.error("Erro ao salvar:",erro);
+            alert("Não foi possível enviar a mensagem.");
           }
         }
-    }
+      }
+
+          
 
     return (
         <section>
@@ -52,7 +56,18 @@ export default function Contato() {
 
             <br></br><br></br>
 
-            <button type="submit">Enviar</button>
+            <textarea
+              placeholder="Digite sua mensagem"
+              value={mensagem}
+              onChange={(e) => setMensagem(e.target.value)}
+              required
+            />
+
+            <br></br><br></br>
+
+            <button type="submit">
+              Enviar mensagem
+            </button>
           </form>
 
           {enviado && <p>Obrigado pelo contato.</p>}

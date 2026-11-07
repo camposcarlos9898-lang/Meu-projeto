@@ -5,13 +5,6 @@ export default async function Github() {
         <section>
             <h1>Meu GitHub</h1>
 
-            <Image
-              src="/foto.jpg"
-              alt="Minha foto"
-              width={200}
-              height={200}
-            />  
-
             <h2>Meus repositórios</h2>
 
             <ul>

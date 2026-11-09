@@ -33,7 +33,8 @@ export default function home() {
                 />
               ))}
       </Secao>
-       <Secao titulo="">
+       
+      <Secao titulo="">
         <BuscaCep />
       </Secao> 
       <br></br>

@@ -1,7 +1,7 @@
 import Cartao from "./componentes/Cartao";
 import Secao from "./componentes/Secao";
-import Contato from "./componentes/Contato";
-import Hobbies from "./componentes/Hobbies";
+import Contato from "../components/Contato";
+import Hobbies from "../components/Hobbies";
 import { projetos } from "./dados";
 import Link from "next/link";
 import BuscaCep from "./componentes/BuscaCep";

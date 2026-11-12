@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { buscaCep } from "../../services/cep";
 
 export default function BuscaCep() {
     const [cep, setCep] = useState("");
@@ -18,21 +19,11 @@ export default function BuscaCep() {
         }
 
         try {
-            const res = await fetch(
-                `https://viacep.com.br/ws/${cep}/json/`
-            );
-
-            const dados = await res.json();
-
-            if (dados.erro) {
-                setErro("CEP não encontrado.");
-                return;
-            }
-
+            const dados = await buscaCep(cep);
             setEndereco(dados);
 
-        }   catch (erro) {
-            setErro("Erro ao buscar CEP.");
+        } catch (erro) {
+            setErro(erro.message);
         }
     }
 

@@ -7,7 +7,7 @@ import {
     deleteDoc,
 } from "firebase/firestore";
 
-import { db } from "./firebase";
+import { db } from "../lib/firebase";
 
 const colecao = collection(db,"hobbies");
 

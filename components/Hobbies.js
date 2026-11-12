@@ -7,7 +7,7 @@ import {
   ouvirHobbies,
   alternarHobby,
   removerHobby
-} from "../../lib/hobbies";
+} from "../services/hobbies";
 
 export default function Hobbies() {
     const [hobbies, setHobbies] =

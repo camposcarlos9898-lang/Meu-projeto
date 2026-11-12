@@ -1,5 +1,5 @@
 import { collection, addDoc, serverTimestamp } from "firebase/firestore";
-import { db } from "./firebase";
+import { db } from "../lib/firebase";
 
 const colecao = collection(db,"mensagens");
 

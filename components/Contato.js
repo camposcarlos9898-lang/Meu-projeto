@@ -1,7 +1,7 @@
 "use client";
 
 import {useState} from "react"
-import { salvarMensagem } from "../../lib/mensagens";
+import { salvarMensagem } from "../services/mensagens";
 
 export default function Contato() {
     const [nome, setNome] = useState("")

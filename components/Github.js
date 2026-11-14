@@ -48,9 +48,7 @@ export default function Github() {
                 <article className="github-card" key={repo.id}>
                 <h2>{repo.nome}</h2>
 
-                <p className="github-descricao">
-                    {repo.descricao || "Sem descrição disponível."}
-                </p>
+               
 
                 <div className="github-info">
                     <span>{repo.linguagem || "Não informada"}</span>

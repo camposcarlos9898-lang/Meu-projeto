@@ -19,7 +19,7 @@ export default function home() {
       <h1><em><strong>Olá, sou {nome} !</strong></em></h1>
 
       <Secao titulo="Bem-vindo ao meu portfólio !">
-        <p><strong>Aqui te mostro um pouco sobre mim.</strong></p>
+        <p><strong>Aqui eu te mostro um pouco sobre mim.</strong></p>
       </Secao>
 
       <Secao titulo="Meus projetos">

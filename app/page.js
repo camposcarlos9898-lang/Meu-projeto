@@ -12,7 +12,7 @@ export default function home() {
   return (
     <div>
       <img
-        src="/foto2.jpg"
+        src="/foto.jpg"
         alt="Minha foto"
         className="foto-perfil"
       />
